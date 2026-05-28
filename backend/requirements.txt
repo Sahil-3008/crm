@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+mysql-connector-python
+email-validator
