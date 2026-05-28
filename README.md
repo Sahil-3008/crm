@@ -17,7 +17,6 @@ A full-stack, production-ready CRM for managing customer support tickets, built 
 | **Dashboard Stats** | Total, Open, In Progress, Closed counts |
 | **Export CSV** | Download filtered or all tickets |
 | **Delete** | With confirmation guard |
-| **Dark Mode** | Default dark theme with `#c8ff00` volt accent |
 
 ---
 
@@ -235,7 +234,7 @@ Frontend available at: **http://localhost:3000**
 | Layer | Technology |
 |---|---|
 | Backend | Python 3.11, FastAPI, Uvicorn |
-| Database | SQLite (WAL mode) |
+| Database | MySQL |
 | Validation | Pydantic v2 |
 | Frontend | React 18, Vite, React Router v6 |
 | Styling | Tailwind CSS 3 |
