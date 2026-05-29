@@ -93,7 +93,7 @@ export default function Dashboard() {
                       <div className="td-issue-title">{t.issue_title}</div>
                       {t.issue_description && (
                         <div className="td-issue-preview truncate" style={{ maxWidth: 220 }}>
-                          {t.issue_description.slice(0, 50)}{t.issue_description.length > 50 ? '…' : ''}
+                          {(t.issue_description || '').slice(0, 50)}{ (t.issue_description || '').length > 50 ? '…' : '' }
                         </div>
                       )}
                     </td>

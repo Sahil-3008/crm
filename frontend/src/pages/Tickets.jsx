@@ -157,7 +157,7 @@ export default function Tickets() {
                       <div className="td-issue-title">{t.issue_title}</div>
                       {t.issue_description && (
                         <div className="td-issue-preview truncate" style={{ maxWidth: 240 }}>
-                          {t.issue_description.slice(0, 55)}{t.issue_description.length > 55 ? '…' : ''}
+                          {(t.issue_description || '').slice(0, 55)}{(t.issue_description || '').length > 55 ? '…' : ''}
                         </div>
                       )}
                     </td>
