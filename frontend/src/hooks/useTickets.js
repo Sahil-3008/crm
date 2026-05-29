@@ -34,7 +34,11 @@ export function useTickets(initialParams = {}) {
         Object.entries(merged).filter(([, v]) => v !== undefined && v !== '')
       )
       const result = await ticketService.list(clean)
-      setData(result)
+      const normalized = Array.isArray(result)
+        ? { tickets: result, total: result.length, page: 1, limit: 20, pages: 1 }
+        : result
+      setData(normalized)
+    
       setParams(merged)
     } catch (e) {
       setError(e.response?.data?.detail || 'Failed to load tickets')
@@ -84,7 +88,7 @@ export function useTicket(ticketId) {
         ticketService.getLogs(ticketId),
       ])
       setTicket(t)
-      setLogs(l)
+      setLogs(Array.isArray(l) ? l : (l.logs || []))
     } catch (e) {
       setError(e.response?.data?.detail || 'Failed to load ticket')
     } finally {
