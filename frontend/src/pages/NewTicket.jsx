@@ -81,7 +81,7 @@ export default function NewTicket() {
             <Field label="Customer Name" error={errors.customer_name}>
               <input
                 className={`input${errors.customer_name ? ' error' : ''}`}
-                placeholder="Jane Smith"
+                placeholder="Enter customer's full name"
                 value={form.customer_name}
                 onChange={e => set('customer_name', e.target.value)}
               />
@@ -90,7 +90,7 @@ export default function NewTicket() {
               <input
                 className={`input${errors.customer_email ? ' error' : ''}`}
                 type="email"
-                placeholder="jane@example.com"
+                placeholder="Enter customer's email address"
                 value={form.customer_email}
                 onChange={e => set('customer_email', e.target.value)}
               />
