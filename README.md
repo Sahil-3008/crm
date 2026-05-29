@@ -204,17 +204,16 @@ Frontend available at: **http://localhost:3000**
 
 ---
 
-### Frontend → Vercel
+### Frontend → Railway
 
-1. Push `frontend/` to a GitHub repository (or a subfolder).
-2. Import project on [Vercel](https://vercel.com).
-3. Set the **Build Command**: `npm run build`
-4. Set the **Output Directory**: `dist`
-5. Add **Environment Variable**:
+1. Push your frontend/ folder to a GitHub repository.
+2. Click Deploy from GitHub Repo and select your repository.
+3. If your frontend is inside a subfolder (frontend), set: Root Directory as frontend
+4. Add **Environment Variable**:
    ```
-   VITE_API_URL=https://your-app.railway.app
+   VITE_API_URL=https://your-backend-production.up.railway.app
    ```
-6. Deploy. Vercel's `vercel.json` handles SPA routing automatically.
+5. Deploy.
 
 ---
 
